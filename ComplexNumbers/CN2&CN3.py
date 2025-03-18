@@ -34,6 +34,16 @@ def main():
      exp_val = evaluate_complex(2*(1j**3), operation="exp")
      print(f"  exp(2 i^3) = {exp_val}")
 
+     print("\n===QUESTION 3 (a):3rd Root of 1 ===")
+     roots_one = evaluate_complex(1,operation="root",n=3)
+     for idx,root in enumerate(roots_one):
+         print(f" 3rd root  #{idx}: {root}")
+
+     print("\n===QUESTION 3 (b):3rd Root of i ===")
+     roots_i = evaluate_complex(1j,operation="root",n=3)
+     for idx,root in enumerate(roots_i):
+         print(f" 3rd root #{idx}:{root}")
+
 if __name__ == "__main__":
     main()
 
