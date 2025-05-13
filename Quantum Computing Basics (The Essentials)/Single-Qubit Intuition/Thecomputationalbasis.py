@@ -27,3 +27,17 @@ norm2 = np.vdot(phi,phi)
 
 print("⟨ψ|ψ⟩ =", norm2)
 
+# orthonormalaity check : 
+
+plus = (zero + one) / np.sqrt(2);
+minus = (zero - one) / np.sqrt(2);
+
+inner_plus_plus = np.vdot(plus,plus);
+inner_minus_minus = np.vdot(minus,minus);
+inner_plus_minus = np.vdot(plus,minus);
+
+print("⟨+|+⟩ =", inner_plus_plus )    
+print("⟨-| -⟩ =", inner_minus_minus )  
+print("⟨+| -⟩ =", inner_plus_minus )
+
+
