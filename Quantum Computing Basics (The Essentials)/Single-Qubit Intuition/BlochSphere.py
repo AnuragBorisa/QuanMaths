@@ -1,11 +1,21 @@
 import numpy as np
+import matplotlib.pyplot as plt
 from qiskit.visualization import plot_bloch_vector
 
-plot_bloch_vector([0,0,1],title="|0⟩ — north pole")
-plot_bloch_vector([0,0,-1],title="|1⟩ — south pole")
-plot_bloch_vector([1,0,0],title="|+⟩ — +X eigenstate")
-
+vectors = [
+    ([0,0,1], "|0⟩ — north pole"),
+    ([0,0,-1], "|1⟩ — south pole"),
+    ([1,0,0], "|+⟩ — +X eigenstate"),
+]
 theta = np.deg2rad(60)
-phi = np.deg2rad(45)
-vec = [np.sin(theta)*np.cos(phi),np.sin(theta)*np.sin(phi),np.cos(theta)]
-plot_bloch_vector(vec,title="θ=60°, φ=45° state")
+phi   = np.deg2rad(45)
+vectors.append((
+    [np.sin(theta)*np.cos(phi),
+     np.sin(theta)*np.sin(phi),
+     np.cos(theta)],
+    "θ=60°, φ=45°"
+))
+
+for vec, title in vectors:
+    plot_bloch_vector(vec, title=title)
+    plt.show()  # <–– pop up each figure
