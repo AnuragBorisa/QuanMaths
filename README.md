@@ -13,4 +13,4 @@ Happy learning and happy coding!
 
 – Anurag Borisa  
 (Co-founder of MyPropertyMap • Quantum enthusiast  
-Email: anurag@example.com)
+Email: anuragborisa@gmail.com)
