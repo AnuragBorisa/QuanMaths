@@ -12,7 +12,7 @@ def prob_after_rotation(theta):
     qc.ry(theta,0)
     qc.save_statevector()
 
-    qc_t = transpile(qc,sim)
+    qc_t = transpile(qc,sim)    
     job = sim.run(qc_t)
     result = job.result()
 
